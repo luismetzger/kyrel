@@ -19,6 +19,28 @@ var row, colors, kyrel, return_value, rando;
     'g' => green
 */
 
+// moveRight();
+// moveLeft();
+// useGreen();
+// useBlue();
+// draw();
+// erase();
+// onGreen();
+// onBlue();
+
+//
+// function main() {
+//   moveRight();
+//   moveRight();
+//   moveRight();
+//   moveRight();
+//   useGreen();
+//   draw();
+// }
+
+// ['.', '.', '.', '.', '.'] // start row (initial state)
+// ['.', '.', '.', '.', 'g'] // end row (end state)
+
 var initial_state = [ '.', '.', '.', '.', '.' ];
 
 function main(n) {
@@ -30,12 +52,43 @@ function main(n) {
   //////////////////////////////////
 
 
+moveRight();
+moveRight();
+useBlue();
+draw();
+
+
 
   //////////////////////////////////
   ////                          ////
   //// ^ YOUR CODE ABOVE HERE ^ ////
   ////                          ////
   //////////////////////////////////
+
+
+// Please uncomment code to run
+
+/*
+useBlue();
+draw();
+moveRight();
+useBlue();
+draw();
+moveRight();
+useBlue();
+draw();
+moveRight();
+useBlue();
+draw();
+moveRight();
+useBlue();
+draw();
+moveRight();
+moveLeft();
+moveLeft();
+erase();
+*/
+
 
 } // END MAIN
 
@@ -158,4 +211,3 @@ $(document).ready(function() {
   initializeRow();
   updateRow();
 });
-
