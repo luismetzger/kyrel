@@ -96,3 +96,62 @@ function num(n) {
 }
 
 num(1);
+
+
+Day 4
+
+1. var initial_state =   ['.', '.', 'b', '.', '.'];
+
+for(var i = 0; i < 5; i++) {
+  if ( onBlue() ) {
+      moveRight();
+  } else {
+     draw();
+  }
+
+}
+
+
+
+2. var initial_state =   ['b', 'g', 'g', 'b', 'b'];
+
+for(var i = 0; i < 5; i++) {
+  if( onBlue() ) {
+    useGreen();
+    draw();
+  } else if( onGreen() ) {
+    useBlue();
+    draw();
+  }
+
+  moveRight();
+}
+
+
+3. var initial_state =   ['b', 'g', 'g', '.', 'g'];
+
+var box = [];
+
+for(var i = 0; i < 5; i++){
+if ( onBlue() ) {
+  box.push('blue')
+} else if ( onGreen() ) {
+  box.push('green')
+} else {
+  box.push('.')
+}
+moveRight();
+}
+
+box.forEach( function(color) {
+if ( color === "blue" ) {
+ useBlue();
+ draw();
+} else if ( color === "green" ) {
+ useGreen();
+ draw();
+} else {
+ erase();
+}
+moveLeft();
+});
