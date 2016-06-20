@@ -155,3 +155,64 @@ if ( color === "blue" ) {
 }
 moveLeft();
 });
+
+
+
+Day 5
+
+1. var initial_state =   ['.', '.', 'b', '.', '.'];
+
+for(var i = 0; i < 5; i++) {
+  if( onBlue() ) {
+    erase();
+    moveRight();
+    useBlue();
+    draw();
+  }
+  moveRight();
+}
+
+
+
+2. var initial_state =   [ 'g', 'b', 'b', '.', '.' ];
+
+for(var i = 0; i < 5; i++) {
+  if( onBlue() ) {
+    moveLeft();
+    erase();
+    moveRight();
+  }
+  moveRight();
+}
+
+
+
+3. var initial_state =   ['b', '.', 'b', '.', '.'];
+
+var blues;
+
+
+for(var i=0; i<4; i++){
+  if ( onBlue() ) {
+
+    draw();
+  }
+  moveRight();
+}
+
+
+4. [ '.', 'b', 'b', '.', 'b' ]
+
+var numBlues = 0;
+useBlue();
+for(var i = 0; i < 5; i++) {
+  if(onBlue()) {
+    numBlues += 1;
+  }
+  draw();
+  moveRight();
+}
+for(var j = 0; j < (5 - numBlues); j++) {
+  erase();
+  moveLeft();
+}
